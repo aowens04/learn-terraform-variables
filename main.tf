@@ -4,12 +4,12 @@ terraform {
     workspaces {
       name = "tf-vault-qa-ao"
     }
-  }*/
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
     }
-  }
+  }*/
 }
 
 provider "aws" {
@@ -127,8 +127,8 @@ module "ec2_instances" {
 }
 
 module "s3_bucket" {
-source = "app.terraform.io/tf-vault-qa-ao/s3-bucket-ao/aws"
-version = "1.0.0"
+source  = "app.terraform.io/tf-vault-qa-ao/terraform-aws-s3-ao/aws"
+version = "1.2.0"
 
 bucket_name = "bucket-module-ao-11062026"
 }
