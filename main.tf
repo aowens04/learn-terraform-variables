@@ -125,3 +125,10 @@ module "ec2_instances" {
     environment = "development"
   }
 }
+
+module "s3_bucket" {
+source = "app.terraform.io/tf-vault-qa-ao/s3-bucket-ao/aws"
+version = "1.0.0"
+
+bucket_name = "bucket-module-ao-11062026"
+}
